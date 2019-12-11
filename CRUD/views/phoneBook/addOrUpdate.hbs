@@ -1,0 +1,23 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{phone.id}}">
+    <div  class="form-group col-md-6">
+        <label>Name</label>
+        <input type="text" class="form-control" Name="name" placeholder="Name" value="{{phone.name}}">
+        <div class="text-danger">
+            {{phone.nameError}}
+        </div>
+    </div>
+     <div  class="form-group col-md-6">
+        <label>Mobile</label>
+        <input type="text" class="form-control" Name="mobile" placeholder="Mobile no" value="{{phone.mobile}}">
+        <div class="text-danger">
+            {{phone.mobileError}}
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <button type="submit" class="btn btn-info" value="submit">Submit</button>
+        <a class="btn btn-primary" href="/list">View All</a>
+    </div>
+</form>

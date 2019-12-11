@@ -1,0 +1,21 @@
+<h3><a class="btn btn-primary" href="/">Create New</a>Contact list</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Edit/Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.mobile}}</td>
+            <td><a href="/{{this._id}}"><button type="submit" class="btn btn-primary">Edit</button></a>
+                <a href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');"><button type="submit" class="btn btn-primary">Delete</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
